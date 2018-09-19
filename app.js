@@ -1,7 +1,7 @@
 'use strict';
-// Hush Restful API 
+// Komodo Restful API 
 // File: app.js
-// This file contains the application code for the Hush Restful API
+// This file contains the application code for the Komodo Restful API
 // It is commented to guide you through the code.
 // Feel free to change whatever you need to, at your own risk.
 
@@ -10,7 +10,7 @@
 const dotenv = require('dotenv');
 dotenv.load();
 
-// Required Libraries For Hush Restful API. These are mandatory to interact with the RPC-JSON server.
+// Required Libraries For Komodo Restful API. These are mandatory to interact with the RPC-JSON server.
 // The Bitcoin library is the most important dependency. Without it, this script will not function or communicate with the RPC-JSON server.
 //
 const changeCase = require('change-case');
@@ -23,7 +23,7 @@ e.ENV = process.env.NODE_ENV || 'production';
 
 // We will require Hapi Server to manage multiple port connections and API routes.
 // Below, you can change the port number for RPC-JSON, if you have changed it from the default configuration.
-const thePort = parseInt(process.env.APP_PORT) || 8232;
+const thePort = parseInt(process.env.APP_PORT) || 7771;
 const theIP = process.env.APP_IP;
 //var server      = new Hapi.Server(+port, '0.0.0.0', { cors: true });
 const server = new Hapi.Server();
@@ -88,7 +88,7 @@ _.each(commands, (value, cmd) => {
             args.push(handler);
             bitclient[cmd].apply(bitclient, args);
 
-            // Return the response from the Hush server
+            // Return the response from the Komodo server
             return res;
         }
     };
@@ -100,11 +100,11 @@ _.each(commands, (value, cmd) => {
     });
 });
 
-// This function will start your Hush API server. 
+// This function will start your Komodo API server. 
 server.start((err) => {
     if (err)
         throw err;
 
-    console.log('Hush API server started at: ' + server.info.uri);
+    console.log('Komodo API server started at: ' + server.info.uri);
 });
 

@@ -1,4 +1,32 @@
-# Hush Restful API 
+# Komodo Restful API 
+
+## About
+
+komodo-restful-api is a restful JSON API for interacting directly with komodod.
+
+
+## Installation
+
+### Prerequisites
+
+You need to have a `komodod` installation that the API can talk to. 
+
+### Development or Production Deployment 
+
+
+```
+git clone https://github.com/komodoservices/komodo-restful-api.git
+cd komodo-restful-api
+npm install
+cp .env.example .env
+```
+
+Edit the contents of `.env` to match your local Komodo install and your application's dedicated IP address
+
+### Start Your Komodo Restful API Server
+```
+node app.js
+```
 
 
 ## Usage
@@ -76,28 +104,5 @@ Here's a non-exhaustive list of the available endpoints.
 /api/wallet_lock
 /api/wallet_passphrase
 /api/wallet_passphrase_change
-```
-
-## Installation
-
-### Prerequisites
-
-You need to have a `hushd` installation that the API can talk to. 
-
-### Development or Production Deployment 
-
-
-```
-git clone https://github.com/madbuda/hush-restful-api.git
-cd hush-restful-api
-npm install
-cp .env.example .env
-```
-
-Edit the contents of `.env` to match your local Hush install and your application's dedicated IP address
-
-### Start Your Hush Restful API Server
-```
-node app.js
 ```
 

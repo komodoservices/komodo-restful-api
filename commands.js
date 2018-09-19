@@ -1,4 +1,4 @@
-// Hush Restful API 
+// Komodo Restful API 
 // File: commands.js
 
 module.exports = {
