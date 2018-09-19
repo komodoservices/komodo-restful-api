@@ -23,7 +23,7 @@ e.ENV = process.env.NODE_ENV || 'production';
 
 // We will require Hapi Server to manage multiple port connections and API routes.
 // Below, you can change the port number for RPC-JSON, if you have changed it from the default configuration.
-const thePort = parseInt(process.env.APP_PORT) || 7771;
+const thePort = parseInt(process.env.APP_PORT) || 9399;
 const theIP = process.env.APP_IP;
 //var server      = new Hapi.Server(+port, '0.0.0.0', { cors: true });
 const server = new Hapi.Server();
